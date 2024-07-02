@@ -7,21 +7,19 @@ function NavBar() {
   const [cartProductsLength, setCartProductsLength] = useState(0);
 
   const sideBarStyles = {
-    width: "370px",
+    width: "100%",
+    maxWidth: "370px",
     position: "fixed",
     top: 0,
     right: 0,
     height: "100vh",
-    backgroundColor: "gray",
+    backgroundColor: "white",
     zIndex: 999,
     padding: "1rem",
     transform: showSidebar ? "translateX(0)" : "translateX(100%)",
     transition: "transform 0.3s ease-in-out",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
-    overflowY: "auto" // Adicionado para permitir a rolagem
   };
 
   useEffect(() => {
@@ -36,17 +34,17 @@ function NavBar() {
 
   return (
     <>
-      <div className="navbar bg-base-100 border-gray-600 border-b">
+      <div className="navbar bg-base-100 border-b border-gray-600">
         <div style={sideBarStyles}>
-          <p className="p-4 border-b border-gray-600 w-screen mb-3">
+          <p className="p-4 border-b border-gray-600 w-full mb-3">
             Cart({cartProductsLength})
           </p>
-          <div style={{ width: "100%" }}> {/* Adicionado para ajustar a largura do conteúdo interno */}
+          <div className="flex-1 overflow-y-auto w-full">
             <Cart />
           </div>
         </div>
         <div className="flex-1 items-center">
-          <a className="btn btn-ghost text-xl">
+          <a href="/" className="btn btn-ghost normal-case text-xl">
             The King in The North E-Commerce
           </a>
           <div>
@@ -99,9 +97,7 @@ function NavBar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a className="justify-between">
-                  Profile
-                </a>
+                <a className="justify-between">Profile</a>
               </li>
               <li>
                 <a>Settings</a>
