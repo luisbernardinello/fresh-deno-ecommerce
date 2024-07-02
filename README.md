@@ -1,5 +1,5 @@
 ![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
-# Fresh Auth Pages :lemon:
+# Fresh E-Commerce :lemon:
 ![fresh-deno-ecommerce](https://socialify.git.ci/luisbernardinello/fresh-deno-ecommerce/image?font=Bitter&language=1&name=1&owner=1&pattern=Signal&theme=Auto)
 ## :sauropod: What will you find? :sauropod:
 
